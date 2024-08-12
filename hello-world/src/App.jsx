@@ -2,7 +2,7 @@
 
 function App() {
   return(
-    <h1>Syed Shahwaiz</h1>
+    <h1>Syed Shahwaiz Qasim (update)</h1>
   )
 }
 
