@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn1{
+  height: 40px;
+  width: 120px;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  margin: 20px;
+  font-size: 1rem;
+  font-family: "Montserrat";
+}
+
+
+.btn2{
+  height: 40px;
+  width: 120px;
+  border: 1px solid red;
+  background-color: yellow;
+  color: white;
+  margin: 20px;
+  font-size: 1rem;
+  font-family: "Montserrat";
+}
