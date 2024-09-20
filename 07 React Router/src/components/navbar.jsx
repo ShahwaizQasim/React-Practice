@@ -5,9 +5,10 @@ function Navbar(){
 
         <header>
             <ul>
-                <Link to={'/Home'}><li>Home</li></Link>
+                <Link to={'/'}><li>Home</li></Link>
                 <Link to={'/About'}><li>About</li></Link>
                 <Link to={'/Contact'}><li>Contact</li></Link>
+                <Link to={'/auth'}><li  >Authentication</li></Link>
             </ul>
         </header>
     )
