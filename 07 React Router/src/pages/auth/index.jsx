@@ -7,8 +7,8 @@ function Auth(){
         <h2>Authentication Page</h2>
         <div>
             <ul>
-                <Link to={'signUp'}><li>SignUp</li></Link>
-                <Link to={'signIn'}><li>SignIn</li></Link>
+                <Link to={'/auth/signUp'}><li>SignUp</li></Link>
+                <Link to={'/auth/signIn'}><li>SignIn</li></Link>
             </ul>
         </div>
         </>
