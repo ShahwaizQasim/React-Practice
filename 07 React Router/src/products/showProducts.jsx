@@ -6,6 +6,7 @@ import Card from "../components/card";
 function ShowProducts() {
   const [products, setProducts] = useState([]);
   // console.log("products", products);
+  
 
   useEffect(() => {
     fetchProducts();
@@ -25,7 +26,9 @@ function ShowProducts() {
           <div className="flex flex-wrap -m-4">
            {
              products.map((data) => {
-              return <Card key={data.id} item={data} />
+              console.log('Data',data.id);                                        
+              
+              return <Card key={data.id} item={data} link={`/productDetail/${data.id}`} />
              })
              
            }

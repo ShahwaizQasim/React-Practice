@@ -1,6 +1,8 @@
-function Card({ item }) {
+import { Link } from "react-router-dom";
+
+function Card({ item,link }) {
   const { description, image, price, title, category } = item;
-  console.log("description", item);
+  // console.log("description", item);
 
   return (
     <>
@@ -20,7 +22,7 @@ function Card({ item }) {
             </h1>
             <p className="leading-relaxed mb-3">{description.slice(0, 158)}</p>
             <div className="flex items-center flex-wrap ">
-              <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+              <Link to='/productDetail' className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
                 Learn More
                 <svg
                   className="w-4 h-4 ml-2"
@@ -34,7 +36,7 @@ function Card({ item }) {
                   <path d="M5 12h14" />
                   <path d="M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
               <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                 <svg
                   className="w-4 h-4 mr-1"
