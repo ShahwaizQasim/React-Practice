@@ -28,7 +28,7 @@ function ShowProducts() {
              products.map((data) => {
               console.log('Data',data.id);                                        
               
-              return <Card key={data.id} item={data} link={`/productDetail/${data.id}`} />
+              return <Card key={data.id} item={data} />
              })
              
            }

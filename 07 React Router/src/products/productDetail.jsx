@@ -1,8 +1,9 @@
 import { useParams } from "react-router";
 
 function ProductDetail() {
-  const pramas = useParams();
-  console.log("pramas", pramas);
+
+  // const pramas = useParams();
+  // console.log("pramas", pramas);
 
   return (
     <>

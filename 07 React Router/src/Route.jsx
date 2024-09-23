@@ -10,6 +10,7 @@ import Auth from "./pages/auth";
 import SignUp from "./pages/auth/signup";
 import ShowProducts from "./products/showProducts";
 import ProductDetail from "./products/productDetail";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
           </Route>
 
           <Route path="/showProducts" element={<ShowProducts />} />
-          <Route path="/productDetail" element={<ProductDetail />}></Route>
+          <Route path="/productDetail" element={<ProductDetail />} />
+
+          <Route path="*" element={<NotFound />} />
 
         </Routes>
       </BrowserRouter>
