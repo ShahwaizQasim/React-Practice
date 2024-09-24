@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Card({ item }) {
-  const { description, image, price, title, category  , id} = item;
+  const { description, image, price, title, category } = item;
   // console.log("description", item);
 
   return (
@@ -22,8 +22,8 @@ function Card({ item }) {
             </h1>
             <p className="leading-relaxed mb-3">{description.slice(0, 158)}</p>
             <div className="flex items-center flex-wrap ">
-              <Link to={`/productDetail/${id}`} className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-                Learn More
+              <Link to={`/productDetail/${title}`} className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                View Detail
                 <svg
                   className="w-4 h-4 ml-2"
                   viewBox="0 0 24 24"

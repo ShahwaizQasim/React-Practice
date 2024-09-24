@@ -25,12 +25,9 @@ function ShowProducts() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
            {
-             products.map((data) => {
-              console.log('Data',data.id);                                        
-              
+             products.map((data) => {  
               return <Card key={data.id} item={data} />
              })
-             
            }
           </div>
         </div>
