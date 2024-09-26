@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 function Card({ item }) {
   const { description, image, price, title, category } = item;
-  // console.log("description", item);
 
   return (
     <>

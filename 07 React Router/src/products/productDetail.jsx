@@ -3,6 +3,7 @@ import Products from "./products";
 import { useEffect, useState } from "react";
 
 function ProductDetail() {
+
   const { title } = useParams();
   console.log("pramas", title);
 
@@ -18,10 +19,10 @@ function ProductDetail() {
   };
   console.log("Products", products);
 
-  // const currentProducts = products.find();
-  // console.log("currentProducts", currentProducts);
+  const currentProducts = products.find((data) => data.title.toString().trim() == title.toString().trim());
+  console.log("currentProducts", currentProducts);
 
-  // const {title,category,description,image,price} = currentProducts;
+  // const {title: productTite,category,description,image,price} = currentProducts;
   // console.log(category);
 
   return (
@@ -32,14 +33,14 @@ function ProductDetail() {
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
+              src={currentProducts?.image}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                {/* {currentProducts.category} */}
+                {currentProducts?.category}
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                {/* {currentProducts.title} */}
+                {currentProducts?.title}
               </h1>
               <div className="flex mb-4">
                 <span className="flex items-center">
@@ -140,7 +141,7 @@ function ProductDetail() {
                 </span>
               </div>
               <p className="leading-relaxed">
-               {/* {currentProducts.description} */}
+                {currentProducts?.description}
               </p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
