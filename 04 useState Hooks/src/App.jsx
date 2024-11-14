@@ -64,8 +64,7 @@ function App() {
   // );
   // console.log("totalExpense", totalExpense);
 
-  // const totalBalance = totalIncome - totalExpense; 
-  
+  // const totalBalance = totalIncome - totalExpense;
 
   return (
     <>

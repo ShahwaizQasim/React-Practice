@@ -20,9 +20,7 @@ function App() {
           <li key={data.id}>{data.name}</li>
         ))}
       </ul>
-      <button>
-        {isLoggedIn? "logout" : "login"}
-      </button>
+      <button>{isLoggedIn ? "logout" : "login"}</button>
     </div>
   );
 }
