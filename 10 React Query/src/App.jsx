@@ -12,7 +12,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <Routes>
             <Route path='/' element={<Products />} />
-            <Route path='.productDetail/:id' element={<ProductDetail />} /> 
+            <Route path='/productDetail/:id' element={<ProductDetail />} /> 
           </Routes>
         </QueryClientProvider>
       </BrowserRouter>

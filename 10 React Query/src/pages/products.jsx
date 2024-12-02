@@ -42,7 +42,9 @@ function Products() {
                                         <p className="leading-relaxed text-base">
                                             {product?.description}
                                         </p>
-                                        <Link key={product?.id} className='pt-2' to={`/productDetail/${product?.id}`}>View Detail</Link>
+                                        <Link key={product?.id} to={`/productDetail/${product?.id}`}>
+                                        <h4 className='mt-2 font-medium underline underline-offset-1 text-[blue]'>View Detail</h4>
+                                        </Link>
                                     </div>
                                 </div>
                             })
