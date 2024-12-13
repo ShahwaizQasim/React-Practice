@@ -1,13 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css'
+import { decrement, increment, reset, incrementByAmount } from './features/counter/counterSlice'
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [counts, setCounts] = useState(0)
+
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
+
+  function handleIncrement() {
+    dispatch(increment());
+  }
+
+  function handleDecrement() {
+    dispatch(decrement());
+  }
+
+  function handleReset() {
+    dispatch(reset());
+  }
+
+  function handleIncrease() {
+    dispatch(incrementByAmount(Number(counts)));
+  }
 
   return (
-      <div>counter app</div>
+    <div>
+      <h1> Counter App</h1>
+      <h2>Count : {count}</h2>
+      <button style={{
+        border: '2px solid #ccc',
+        margin: '10px'
+      }} onClick={handleIncrement}>+</button>
+      <button style={{
+        border: '2px solid #ccc',
+        margin: '10px'
+      }} onClick={handleDecrement}>-</button>
+      <button style={{
+        border: '2px solid #ccc',
+        margin: '10px'
+      }} onClick={handleReset}>Reset</button>
+      <br />
+      <br />
+      <input type="text" value={counts} onChange={(e) => setCounts(e.target.value)} style={{
+        height: '40px',
+        border: '2px solid #ccc',
+        margin: '10px'
+      }} />
+      <button style={{
+        border: '2px solid #ccc',
+        margin: '10px'
+      }} onClick={handleIncrease}>Inc by Count Value</button>
+    </div>
+
   )
 }
 
