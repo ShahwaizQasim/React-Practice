@@ -66,3 +66,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.container-light{
+  height: 80vh;
+  background-color: #ccc;
+  color: #000;
+  padding-top: 10px;
+}
+.container-dark{
+  height: 80vh;
+  background-color: #000;
+  padding-top: 10px;
+  color: #fff;
+}
