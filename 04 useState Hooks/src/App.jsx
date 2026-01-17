@@ -1,3 +1,16 @@
+// useState React ka ek hook hai jo component ke andar state manage karne ke liye use hota hai.
+
+// useState do cheezen return karta hai:
+// State variable (current value)
+// State update karne ka function
+
+// Jab bhi hum state update function call karte hain, React component ko re-render karta hai, jis se UI automatically update ho jati hai.
+// Iska use hum dynamic data handle karne ke liye karte hain, jaise:
+
+
+// useState React hook hai jo functional components me state manage karta hai. Jab state change hoti hai to
+// component re-render hota hai aur UI update ho jati hai.
+
 import { useState } from "react";
 import "./index.css";
 import "./App.css";
