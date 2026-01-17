@@ -1,6 +1,12 @@
+import { useState } from "react";
 import "./App.css";
+import Logout from "./components/logout";
+import Login from "./components/login";
 
 function App() {
+  // conditional rendering
+  const [isLogedIn, setIsLoggedIn] = useState(true);
+
   const userName = "Syed Shahwaiz";
   const urlImage =
     "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg";
@@ -9,7 +15,12 @@ function App() {
     { id: 2, name: "Hassan" },
     { id: 3, name: "Ali" },
   ];
-  const isLoggedIn = true;
+
+  // conditional rendering 
+
+  if (!isLogedIn) {
+    return <Login/>
+  }
 
   return (
     <div>
@@ -20,7 +31,10 @@ function App() {
           <li key={data.id}>{data.name}</li>
         ))}
       </ul>
-      <button>{isLoggedIn ? "logout" : "login"}</button>
+
+      {/* conditional rendering */}
+      {/* {isLogedIn? <Logout /> : <Login />} */}
+      {isLogedIn && <Logout />}
     </div>
   );
 }
